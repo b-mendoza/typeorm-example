@@ -6,5 +6,8 @@
   "license": "ISC",
   "name": "typeorm-example",
   "private": "true",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "ts-node-dev --respawn -r tsconfig-paths/register src/index.ts"
+  }
 }
