@@ -1,0 +1,10 @@
+{
+  "author": {
+    "name": "Bryan Mendoza",
+    "email": "bmendoza.dev@hotmail.com"
+  },
+  "license": "ISC",
+  "name": "typeorm-example",
+  "private": "true",
+  "version": "1.0.0"
+}
