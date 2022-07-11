@@ -11,4 +11,10 @@ export class Client extends Person {
     default: true,
   })
   is_active: boolean;
+
+  @ManyToOne(() => Transaction, (transaction) => transaction.client)
+  @JoinColumn({
+    name: 'transactions_id',
+  })
+  transactions: Transaction[];
 }
