@@ -1,6 +1,8 @@
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToMany, ManyToOne } from 'typeorm';
 
 import { Person } from '@entities/Person';
+import { Transaction } from '@entities/Transaction';
+import { Banker } from '@entities/Banker';
 
 @Entity()
 export class Client extends Person {
@@ -17,4 +19,7 @@ export class Client extends Person {
     name: 'transactions_id',
   })
   transactions: Transaction[];
+
+  @ManyToMany(() => Banker)
+  bankers: Banker[];
 }
