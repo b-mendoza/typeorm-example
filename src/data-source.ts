@@ -3,6 +3,7 @@ import { DataSource } from 'typeorm';
 
 import { Banker } from '@entities/Banker';
 import { Client } from '@entities/Client';
+import { Transaction } from '@entities/Transaction';
 
 if (process.env.PORT == null) throw new Error('`PORT` is not defined');
 
@@ -12,7 +13,7 @@ const PORT = parseInt(process.env.PORT);
 export const AppDataSource = new DataSource({
   type: 'postgres',
   database: process.env.DATABASE,
-  entities: [Banker, Client],
+  entities: [Banker, Client, Transaction],
   host: process.env.HOST,
   logging: true,
   migrations: [MIGRATIONS_DIR],
