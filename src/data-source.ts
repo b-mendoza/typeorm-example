@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { DataSource } from 'typeorm';
 
 if (process.env.PORT == null) throw new Error('`PORT` is not defined');
