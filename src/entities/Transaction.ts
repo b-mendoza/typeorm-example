@@ -2,10 +2,14 @@ import {
   BaseEntity,
   Column,
   CreateDateColumn,
+  Entity,
+  JoinColumn,
+  ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
-  Entity,
 } from 'typeorm';
+
+import { Client } from '@entities/Client';
 
 enum TransactionType {
   Deposit = 'deposit',
@@ -31,4 +35,10 @@ export class Transaction extends BaseEntity {
 
   @UpdateDateColumn()
   updated_at: Date;
+
+  @ManyToOne(() => Client, (client) => client.transactions)
+  @JoinColumn({
+    name: 'client_id',
+  })
+  client: Client;
 }
