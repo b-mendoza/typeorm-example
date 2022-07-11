@@ -16,12 +16,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "~/*": ["./*"]
+      "~/*": ["*"],
+      "@/*": ["src/*"],
+      "@entity/*": ["src/entity/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
+    "strictPropertyInitialization": false,
     "target": "ESNext",
     "useDefineForClassFields": true
   },
