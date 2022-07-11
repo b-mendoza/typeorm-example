@@ -1,0 +1,27 @@
+{
+  "env": {
+    "targets": {
+      "node": 16
+    }
+  },
+  "minify": true,
+  "module": {
+    "type": "commonjs"
+  },
+  "jsc": {
+    "baseUrl": "./",
+    "parser": {
+      "decorators": true,
+      "syntax": "typescript"
+    },
+    "paths": {
+      "~/*": ["*"],
+      "@/*": ["src/*"],
+      "@entity/*": ["src/entity/*"]
+    },
+    "transform": {
+      "decoratorMetadata": true,
+      "legacyDecorator": true
+    }
+  }
+}
