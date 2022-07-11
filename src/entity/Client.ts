@@ -13,10 +13,10 @@ export class Client extends BaseEntity {
   id: string;
 
   @Column()
-  firstName: string;
+  first_name: string;
 
   @Column()
-  lastName: string;
+  last_name: string;
 
   @Column({
     unique: true,
@@ -27,7 +27,7 @@ export class Client extends BaseEntity {
     length: 10,
     unique: true,
   })
-  cardNumber: string;
+  card_number: string;
 
   @Column('numeric')
   balance: number;
@@ -35,11 +35,11 @@ export class Client extends BaseEntity {
   @Column({
     default: true,
   })
-  isActive: boolean;
+  is_active: boolean;
 
   @CreateDateColumn()
-  createdAt: Date;
+  created_at: Date;
 
   @UpdateDateColumn()
-  updatedAt: Date;
+  updated_at: Date;
 }
