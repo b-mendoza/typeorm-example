@@ -1,22 +1,22 @@
 import 'dotenv/config';
 import { DataSource } from 'typeorm';
 
-import { Client } from '@entity/Client';
+import { Banker } from '@entities/Banker';
+import { Client } from '@entities/Client';
 
 if (process.env.PORT == null) throw new Error('`PORT` is not defined');
 
-const parsedPort = parseInt(process.env.PORT);
-
 const MIGRATIONS_DIR = `${__dirname}/migrations/**/*.ts`;
+const PORT = parseInt(process.env.PORT);
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
   database: process.env.DATABASE,
-  entities: [Client],
+  entities: [Banker, Client],
   host: process.env.HOST,
   logging: true,
   migrations: [MIGRATIONS_DIR],
   password: process.env.PASSWORD,
-  port: parsedPort,
+  port: PORT,
   username: process.env.USERNAME,
 });
