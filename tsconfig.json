@@ -18,7 +18,7 @@
     "paths": {
       "~/*": ["*"],
       "@/*": ["src/*"],
-      "@entity/*": ["src/entity/*"]
+      "@entities/*": ["src/entities/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
