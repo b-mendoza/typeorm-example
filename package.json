@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "dotenv": "16.0.1",
-    "express": "4.18.1",
+    "express": "4.20.0",
     "pg": "8.7.3",
     "reflect-metadata": "0.1.13",
-    "typeorm": "0.3.7"
+    "typeorm": "0.3.20"
   },
   "devDependencies": {
     "@swc/cli": "0.1.57",
